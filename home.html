@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "espresso": "#2D1B14",
+                "champagne": "#D4AF37",
+                "gold-accent": "#C5A059",
+                "surface-dark": "#1F120D",
+                "primary": "#D4AF37",
+                "on-primary": "#2D1B14",
+                "background": "#2D1B14",
+                "on-background": "#F9F5F2",
+              },
+              fontFamily: {
+                serif: ["Playfair Display", "serif"],
+                sans: ["Plus Jakarta Sans", "sans-serif"],
+              },
+              animation: {
+                'fade-in-up': 'fadeInUp 1s ease-out forwards',
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            opacity: 0.3;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        body {
+            scroll-behavior: smooth;
+            background-color: #2D1B14;
+        }
+    </style>
+</head>
+<body class="bg-espresso text-on-background font-sans selection:bg-champagne/30">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 border-b border-champagne/10 bg-espresso/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-5 max-w-7xl mx-auto w-full">
+<button class="p-2 text-champagne hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="text-xl md:text-2xl font-serif font-bold tracking-[0.3em] text-champagne uppercase">
+            Haijab's
+        </div>
+<div class="flex items-center gap-4 md:gap-8">
+<nav class="hidden md:flex gap-8 items-center font-serif text-sm tracking-widest uppercase">
+<a class="text-champagne border-b border-champagne pb-1" href="#">home</a>
+<a class="text-on-background/60 hover:text-champagne transition-colors" href="/flavour.html">FLAVOURS</a>
+<a class="text-on-background/60 hover:text-champagne transition-colors" href="/busniess.html">bUSNIESS</a>
+<a class="text-on-background/60 hover:text-champagne transition-colors" href="/Shop.html">SHOP</a>
+</nav>
+<button class="p-2 text-champagne relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-white rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col md:flex-row overflow-hidden pt-20">
+<!-- Image Side -->
+<div class="w-full md:w-1/2 h-[50vh] md:h-auto relative overflow-hidden">
+<img alt="Melting Chocolate" class="absolute inset-0 w-full h-full object-cover scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn0qrwRC2lreYSuFlmGCKdvAk_BPFEzZ-TR479sn3ogYgjBI2Yc3YwrtDyXPsqaox7-ETw7Wh_rFfBZ3cp93KHy2_UbP8KgtOoJMRhk9O6cOzmNbd1sQ99ahnv3fTyELYjatBjq6qW6X3Lqp46WL9jhHrvJ9MUddopaFyujE9II2qFu88vCo8V4wHIDDCVelkKg5FLpGUtrz9l9Z8WAO4azEfsJLqZkIH7DUvQ_VpNtCU_PuILlAM59GfM4v3ZRXK9Yg1yRMErq6qn"/>
+<div class="absolute inset-0 bg-espresso/20"></div>
+</div>
+<!-- Content Side -->
+<div class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16 bg-espresso">
+<div class="max-w-xl space-y-8 animate-fade-in-up">
+<span class="text-champagne font-medium tracking-[0.4em] uppercase text-xs block">Maitres Chocolatiers Since 1924</span>
+<h1 class="font-serif text-5xl md:text-7xl text-white leading-[1.1]">
+                    Artisan Craftsmanship, <br/>
+<span class="italic text-champagne">Seven Unique Stories.</span>
+</h1>
+<p class="text-on-background/70 text-lg leading-relaxed font-light">
+                    Where rare cocoa origins meet century-old Swiss techniques. Experience the pinnacle of chocolate artistry in every handcrafted piece.
+                </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<button class="bg-champagne text-espresso px-10 py-4 font-serif font-bold uppercase tracking-widest gold-glow transition-all duration-500">
+                        Explore Collection
+                    </button>
+<button class="border border-champagne/40 text-champagne px-10 py-4 font-serif font-bold uppercase tracking-widest hover:bg-champagne hover:text-espresso transition-all duration-500">
+                        Private Tasting
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Taste Profile Bar -->
+<section class="py-12 bg-surface-dark/50 border-y border-champagne/10">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-center gap-4 justify-center">
+<span class="material-symbols-outlined text-champagne text-3xl" data-icon="eco">eco</span>
+<div class="text-sm tracking-widest uppercase font-medium">Ethically Sourced</div>
+</div>
+<div class="flex items-center gap-4 justify-center">
+<span class="material-symbols-outlined text-champagne text-3xl" data-icon="brush">brush</span>
+<div class="text-sm tracking-widest uppercase font-medium">Hand-Finished</div>
+</div>
+<div class="flex items-center gap-4 justify-center">
+<span class="material-symbols-outlined text-champagne text-3xl" data-icon="public">public</span>
+<div class="text-sm tracking-widest uppercase font-medium">Global Delivery</div>
+</div>
+</div>
+</section>
+<div class="gold-divider mx-auto w-3/4 my-12"></div>
+<!-- Flavor Carousel (Bento Grid Style) -->
+<section class="py-24 px-6 max-w-7xl mx-auto reveal">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-serif text-4xl md:text-5xl text-white">The Signature Seven</h2>
+<p class="text-champagne/60 tracking-[0.2em] uppercase text-xs">Curated for the Connoisseur</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Midnight & Salt -->
+<div class="md:col-span-2 group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-2xl transition-transform duration-700">
+<img alt="Dark Chocolate" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwJbUi5ciqAAb8OVhuGXRbrrgb3ijwExhZxuCQDL6KdyvZPDyBTaLqlu2kIQFwmoLc1-OcaHyJwjcb7JYBbendkZqrEzcvxQjhbrsooK2GI6HIJ1sKK_Mk0hWSCi_EOTdSLquOR9NGNxg2HEA2pmwIuBOXKyvuXsVGiaPjhtbrhktvN6x2LwphTszenKbZrV6Q_9ZTg4fTqFF1Z-lJDbyvNI-Ap1p1gYc0i_c9UPLpZBoFu4gvBfX0Xw3yPqx5JbGNACkIWY_M5I0H"/>
+<div class="absolute inset-0 bg-gradient-to-t from-espresso via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-serif text-2xl text-white">Midnight &amp; Fleur de Sel</h3>
+<p class="text-champagne text-sm uppercase tracking-widest mt-2">72% Single Origin</p>
+</div>
+</div>
+<!-- Velvet Rose -->
+<div class="group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-2xl transition-transform duration-700">
+<img alt="Rose Chocolate" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpzxQIkdLfAxDm0nvD9AHPg2VidgCqvnmAccGSTwUiu6w9_vRidvT6cUG6Q0ZQz34daJoGyKmt_hG0ff6PxAs2RuN8G9TOJ5k9NERxxpNKwMOkhgGLaFauD00MCuB5cNbR8tMLPmsyKZeQnTAanxgrtrPgwVnI0N9Sm3Z0jdBV6UVTBGMLqLEomQbnHB4iRE1tjUSs_DRb3mv8_JeRLUQiS7sPBuSetgfdwnzG7bViZFHaNPYcrJcZTNTIKQ4DNyc9sAq9kp5UGLMN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-espresso to-transparent opacity-70"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-serif text-xl text-white">Velvet Rose</h3>
+</div>
+</div>
+<!-- Bean & Bar -->
+<div class="group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-2xl transition-transform duration-700">
+<img alt="Coffee Chocolate" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqMF4yYIzSA5A6XcyZFOxn1FPz3PAPLy-mkvuzBgFoSZicfl7zUBdbpGAbiY8_TS1bk_dNllvkgXdNTmni1281Ah-rOVNH1Bz8-v1GkByQVOUIKcLwkFN7uP-EZ_eOdLh4HWG_NQtA1fgWD2iI5CkqZhYmxEI6YaLO0uRtzu4D7epD9S4wKJeR9Wjh2T6OKLNl6XhojsVyrRtjHPjSdodBVARSsSHO3If9AIREfLIxy5eNOPeO9NOtx4i8aPcoYbk1OIEoXDJfDOQS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-espresso to-transparent opacity-70"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-serif text-xl text-white">Bean &amp; Bar</h3>
+</div>
+</div>
+</div>
+</section>
+<div class="gold-divider mx-auto w-3/4 my-12"></div>
+<!-- B2B vs B2C Comparison Section -->
+<section class="py-24 px-6 bg-surface-dark reveal">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-serif text-4xl text-white mb-4">Chocolate for Every Scale</h2>
+<p class="text-on-background/60 font-light max-w-2xl mx-auto">Whether it's a personal indulgence or a corporate hallmark, our atelier delivers excellence tailored to your needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- For You (B2C) -->
+<div class="glass-card p-12 rounded-sm space-y-8 group hover:border-champagne/40 transition-colors duration-500">
+<div class="w-16 h-16 border border-champagne/30 rounded-full flex items-center justify-center group-hover:bg-champagne/10 transition-colors">
+<span class="material-symbols-outlined text-champagne text-3xl" data-icon="person">person</span>
+</div>
+<h3 class="font-serif text-3xl text-white italic">For You</h3>
+<p class="text-on-background/70 leading-relaxed">Discover our curated tasting boxes, monthly subscriptions, and seasonal releases for the home connoisseur.</p>
+<ul class="space-y-4 text-sm tracking-wide text-on-background/80">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-champagne text-sm" data-icon="check">check</span> Boutique Subscription</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-champagne text-sm" data-icon="check">check</span> Limited Seasonal Drops</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-champagne text-sm" data-icon="check">check</span> Artisanal Gift Wrapping</li>
+</ul>
+<button class="w-full py-4 border border-champagne/20 text-champagne font-bold uppercase tracking-widest hover:bg-champagne hover:text-espresso transition-all duration-500">Shop Boutique</button>
+</div>
+<!-- For Business (B2B) -->
+<div class="glass-card p-12 rounded-sm space-y-8 group hover:border-champagne/40 transition-colors duration-500">
+<div class="w-16 h-16 border border-champagne/30 rounded-full flex items-center justify-center group-hover:bg-champagne/10 transition-colors">
+<span class="material-symbols-outlined text-champagne text-3xl" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<h3 class="font-serif text-3xl text-white italic">For Business</h3>
+<p class="text-on-background/70 leading-relaxed">Elevate your brand with bespoke chocolate solutions for luxury hotels, boutiques, and corporate gifting.</p>
+<ul class="space-y-4 text-sm tracking-wide text-on-background/80">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-champagne text-sm" data-icon="check">check</span> Bespoke Branding</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-champagne text-sm" data-icon="check">check</span> Wholesale Hospitality</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-champagne text-sm" data-icon="check">check</span> Dedicated Account Manager</li>
+</ul>
+<button class="w-full py-4 bg-champagne text-espresso font-bold uppercase tracking-widest gold-glow transition-all duration-500">Partner With Us</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Parallax Quote Section -->
+<section class="h-[60vh] relative flex items-center justify-center parallax-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwtX4sslaxzPknp9roxP7g8J4PDRAFDhaQO_TB4pbTpjvaROby3kT9eOW8sv4Xg1lKmsvyWmu3lpeoENgB8VteWYhZgBJ3tOAcktQYTvTUQBjC16K1qW5Wmn1wgSyTuwgYSwt70ENFKKunUAt3XRKv7bEiqDS2SlWzFAciI2tRXCQGAr82omZMB6VviSWQ7CnSbP42JjwUXVD1KYIhd3HeMMxfD-eM8dCZf7y5FDTMbfRnSyHf-FPQBdW2ZsOoxAG_rK4lGALKAWiD');">
+<div class="absolute inset-0 bg-espresso/60"></div>
+<div class="relative text-center max-w-3xl px-6 reveal">
+<h2 class="font-serif text-3xl md:text-5xl text-white italic leading-tight">
+                "Chocolate is not a treat, it is a ritual of the senses."
+            </h2>
+<p class="text-champagne mt-6 tracking-[0.3em] uppercase text-sm">— Master Atelier</p>
+</div>
+</section>
+<!-- Social Proof Strip -->
+<section class="py-12 bg-espresso border-t border-champagne/10">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<p class="text-champagne/40 font-serif italic text-lg">
+                Trusted by luxury hotels, boutique cafes, and chocolate lovers worldwide.
+            </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-espresso border-t border-champagne/20 pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-serif font-bold text-champagne tracking-[0.2em] mb-6 uppercase">Haijab's</div>
+<p class="text-on-background/50 text-sm leading-relaxed mb-8">
+                    Crafting timeless indulgence in the heart of Zurich. Our legacy is built on the pursuit of the perfect cocoa bean.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-champagne/60 hover:text-champagne cursor-pointer transition-colors" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-champagne/60 hover:text-champagne cursor-pointer transition-colors" data-icon="instagram">camera_alt</span>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="text-champagne font-bold uppercase text-[10px] tracking-widest">Collections</h5>
+<ul class="space-y-3 text-sm text-on-background/60">
+<li><a class="hover:text-champagne transition-colors" href="#">The Signature Seven</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Limited Seasonal Drops</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Corporate Gifting</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-champagne font-bold uppercase text-[10px] tracking-widest">The Atelier</h5>
+<ul class="space-y-3 text-sm text-on-background/60">
+<li><a class="hover:text-champagne transition-colors" href="#">Our Heritage</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Ethical Sourcing</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Global Shipping</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-champagne font-bold uppercase text-[10px] tracking-widest">Newsletter</h5>
+<div class="flex">
+<input class="bg-surface-dark/50 border border-champagne/20 text-white p-3 w-full text-xs focus:outline-none focus:border-champagne" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-champagne text-espresso px-4 text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all">Join</button>
+</div>
+<p class="text-[10px] text-on-background/40">Sign up for early access to limited drops.</p>
+</div>
+</div>
+<div class="pt-8 border-t border-champagne/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] tracking-widest uppercase text-on-background/30">© 2024 HAIJAB'S CHOCOLATE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8 text-[10px] tracking-widest uppercase text-on-background/30">
+<a class="hover:text-champagne transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-champagne transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Reveal on scroll functionality
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    // Initial check
+    reveal();
+</script>
+</body></html>

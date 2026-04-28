@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The 7 Wonders | Haijab's Chocolate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#f0d4ca",
+                    "on-primary-fixed": "#281810",
+                    "secondary-container": "#fed488",
+                    "surface-container-highest": "#f9ddd2",
+                    "tertiary": "#1a1918",
+                    "inverse-on-surface": "#ffede7",
+                    "primary-container": "#3c2a21",
+                    "primary-fixed": "#fbdcce",
+                    "on-secondary-fixed": "#261900",
+                    "secondary-fixed": "#ffdea5",
+                    "on-background": "#271812",
+                    "on-tertiary-container": "#989593",
+                    "on-primary-container": "#aa9084",
+                    "primary-fixed-dim": "#dec1b3",
+                    "surface": "#fff8f6",
+                    "outline": "#81756f",
+                    "on-surface-variant": "#4f4540",
+                    "on-surface": "#271812",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#25160e",
+                    "tertiary-fixed-dim": "#c9c6c3",
+                    "surface-container-high": "#ffe2d8",
+                    "outline-variant": "#d3c3bd",
+                    "on-tertiary-fixed-variant": "#484745",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#785a1a",
+                    "background": "#fff8f6",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "tertiary-fixed": "#e5e2df",
+                    "secondary": "#775a19",
+                    "surface-tint": "#705a4f",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#fff1ec",
+                    "surface-variant": "#f9ddd2",
+                    "surface-container": "#ffe9e2",
+                    "tertiary-container": "#2f2e2c",
+                    "on-primary-fixed-variant": "#574238",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1c1b1a",
+                    "inverse-primary": "#dec1b3",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fff8f6",
+                    "inverse-surface": "#3d2d26",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-edge": "40px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Noto Serif"],
+                    "headline-display": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(60, 42, 33, 0.1); }
+        .lux-card-shadow { box-shadow: 0 10px 30px -15px rgba(60, 42, 33, 0.15); }
+        .lux-card-hover:hover { box-shadow: 0 20px 40px -10px rgba(60, 42, 33, 0.2); transform: translateY(-4px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F9F5F2] font-body-md text-primary selection:bg-secondary/20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#C5A059]/10 bg-[#F9F5F2]/90 backdrop-blur-md shadow-sm dark:bg-stone-950/90 dark:shadow-none transition-all duration-300">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6 w-full">
+<div class="flex items-center gap-6">
+<button class="p-2 hover:bg-[#C5A059]/5 transition-all duration-300 rounded-full group">
+<span class="material-symbols-outlined text-[#3C2A21] dark:text-stone-100 group-hover:text-[#C5A059]" data-icon="menu">menu</span>
+</button>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#C5A059] font-semibold border-b-2 border-[#C5A059] pb-1 font-['Noto_Serif'] text-sm tracking-wide" href="#">Flavors</a>
+<a class="text-[#3C2A21]/70 dark:text-stone-400 hover:text-[#3C2A21] dark:hover:text-stone-100 transition-colors duration-300 font-['Noto_Serif'] text-sm tracking-wide" href="/home.html">Home</a>
+<a class="text-[#3C2A21]/70 dark:text-stone-400 hover:text-[#3C2A21] dark:hover:text-stone-100 transition-colors duration-300 font-['Noto_Serif'] text-sm tracking-wide" href="/flavour.html">Flavours</a>
+<a class="text-[#3C2A21]/70 dark:text-stone-400 hover:text-[#3C2A21] dark:hover:text-stone-100 transition-colors duration-300 font-['Noto_Serif'] text-sm tracking-wide" href="/busniess.html">Business</a>
+<a class="text-[#3C2A21]/70 dark:text-stone-400 hover:text-[#3C2A21] dark:hover:text-stone-100 transition-colors duration-300 font-['Noto_Serif'] text-sm tracking-wide" href="/shop.html">Shops</a>
+</nav>
+</div>
+<a class="text-2xl font-bold tracking-[0.2em] text-[#3C2A21] dark:text-[#C5A059] uppercase font-['Noto_Serif']" href="/">
+                Haijab's Chocolate
+            </a>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#C5A059]/5 transition-all duration-300 rounded-full group">
+<span class="material-symbols-outlined text-[#3C2A21] dark:text-stone-100 group-hover:text-[#C5A059]" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-section-gap text-center">
+<div class="mb-4">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase">The Collection</span>
+</div>
+<h1 class="font-headline-display text-headline-display text-primary-container mb-6 italic tracking-tight">The 7 Wonders</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed opacity-80">
+                A curated journey through the world's most evocative flavor profiles. Each bar is a testament to our artisanal process, handcrafted with the finest ethically-sourced ingredients.
+            </p>
+</section>
+<!-- Bento Grid Flavor Gallery -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+<!-- 1. Midnight Velvet -->
+<div class="md:col-span-8 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-3/5 overflow-hidden">
+<img alt="Midnight Velvet" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 aspect-[4/3] md:aspect-auto" data-alt="Macro shot of broken dark chocolate bars on a slate background with cocoa powder dusting, moody shadows and professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmRAATukY03h7oTf9UFWTBcrDEboWemczeS8bRp1A_beD3FnH9cRbGkZMaiBgZWFjLW2pjGSLztXVlPvYB5ZzIHNeihEJ4dnRnOP_GXK3X03I8jaR5W1EDrsT2-Ae8P1bYB0rFAJhlu8OL0UekiAto4lgeGmLLpkqnI0CltqkY8cqCIgWIMTZbmPzawPIlAO36-6sIK_icE4HghL_-xrVc2JLsoAkJMQaPYf3K9CKlvy_UMUOLefRGala1MOqeRjlAEOtPZNJgwb6D"/>
+</div>
+<div class="md:w-2/5 p-10 flex flex-col justify-center items-start">
+<span class="font-label-caps text-label-caps text-secondary mb-3">FLAVOR 01</span>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Midnight Velvet</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed italic">75% Single-Origin Dark. Intense, floral notes with a lingering silk finish.</p>
+<button class="px-8 py-3 bg-primary-container text-secondary-fixed font-label-caps text-label-caps tracking-widest hover:opacity-90 transition-opacity flex items-center gap-2">
+                                VIEW DETAILS
+                                <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2. Himalayan Blush -->
+<div class="md:col-span-4 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col h-full">
+<div class="h-64 overflow-hidden">
+<img alt="Himalayan Blush" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Pink Himalayan salt crystals resting on smooth milk chocolate surface, soft morning light, cream background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Q3UWVXu4e_hX5YNVpdE7JmKOzHH4fs6Mf_jqmSGKMY19dwnVyBmiPFznqxxDIGUiBhHFhn5w8EQaGICKfJoWegLc2CMecwuf_nqShn_wI5Q9CBjh73cyHCvTvDM0AGVXxqW42UQvQfHuDdap4aMjNVl5ZBJqiVKumu40g8JaFg4IQqDRzPCjK3s277Kr9vvyHlehwdv0HuFjihaDO0saZF1Pvg85-9qDW6IUWRlRH7opaNKbCBAaQEMEP585pF2CkqHr25sRNgNQ"/>
+</div>
+<div class="p-8 flex flex-col flex-grow items-center text-center">
+<span class="font-label-caps text-label-caps text-secondary mb-2">FLAVOR 02</span>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Himalayan Blush</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">Velvety milk chocolate balanced with hand-harvested pink salt crystals.</p>
+<button class="mt-auto font-label-caps text-label-caps text-primary-container border-b border-[#C5A059] pb-1 hover:text-secondary transition-colors">
+                                VIEW DETAILS
+                            </button>
+</div>
+</div>
+</div>
+<!-- 3. Golden Roast -->
+<div class="md:col-span-4 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col h-full">
+<div class="h-64 overflow-hidden">
+<img alt="Golden Roast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Roasted hazelnuts embedded in white chocolate bar, golden caramel swirls, warm studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYa8_7spTbnC88Gg-39Kq4cINhHdUKcfntueBlQpy9DjC7tLBjF41XkNKK_bNWvchjPWbpbCC0Z_nxpbITcoRZ_TFpadk0gsmhLz2yZ-xOfA5vb581IsvmDtvbZXI5teNtm-7VtFCoNELuEQy-RJx-lBZ5JrgNALDPm8SXWDZf0ntDbDGJusIwgD7i6lOIofbUFHH26gaYxR4Fw1L7UDfigcyMLp_8Zw8Yci2Yrh8SovTlaJEFt3bYFt-4MUasS0pOEzTH5ceVoMcR"/>
+</div>
+<div class="p-8 flex flex-col flex-grow items-center text-center">
+<span class="font-label-caps text-label-caps text-secondary mb-2">FLAVOR 03</span>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Golden Roast</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">Creamy white chocolate infused with slow-roasted Piedmont hazelnuts.</p>
+<button class="mt-auto font-label-caps text-label-caps text-primary-container border-b border-[#C5A059] pb-1 hover:text-secondary transition-colors">
+                                VIEW DETAILS
+                            </button>
+</div>
+</div>
+</div>
+<!-- 4. Zesty Orchard -->
+<div class="md:col-span-4 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col h-full">
+<div class="h-64 overflow-hidden">
+<img alt="Zesty Orchard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dark chocolate shavings with candied orange peels and fresh ginger root slices on a rustic wooden table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT52NM6a_yV69Gv3CVB1CL1ReAsVR9BFjsX0LP23kewZSkMfZGSJnajIaFUVyiPSbNDthJNsynWBzAKF6tHKGHIFYgPOL24cQrXK2pJAdL8zHpRjiZm5kpA3Uqa7XZZMeWsKJVMrNU1qsl3xhk0IYLlNRQWQDEnXEzBg3VKF1GkUjqBc3LttuD42FM_HueOg3rgGxrhAT0Bt5zRu7rjDP8BbBIXmYgU-5wk75QbSdL-U5aafTNV5_wxXUqLzKd-iexW-mT0FVcwTxH"/>
+</div>
+<div class="p-8 flex flex-col flex-grow items-center text-center">
+<span class="font-label-caps text-label-caps text-secondary mb-2">FLAVOR 04</span>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Zesty Orchard</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">Sophisticated dark chocolate with bright orange zest and a ginger kick.</p>
+<button class="mt-auto font-label-caps text-label-caps text-primary-container border-b border-[#C5A059] pb-1 hover:text-secondary transition-colors">
+                                VIEW DETAILS
+                            </button>
+</div>
+</div>
+</div>
+<!-- 5. Silk Road -->
+<div class="md:col-span-4 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col h-full">
+<div class="h-64 overflow-hidden">
+<img alt="Silk Road" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artistic composition of star anise, cardamom pods, and cinnamon sticks around a pool of melted milk chocolate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS205F20xUzcUYVet_gqJDzfNPp8dmzCBkKw-zgoW-iWdmDsKrXBLnbxIEk32A-OY4uWZW97QSw_7ZymPYi1nvsglXqhGl653JKWybu-iJBj045MgsO9g_f2_4558TTiWOT0GqWQJWrHh8d6coQCIBbtOXHQFxfwVFHUxEaQ8B8BIfo4Hhoaf8SOlK-eHRxED86208xb7uApI2u7ml7zPj7OMtpGZdw7M7ucv2MrsHdxoeguDT1lUCNoZypH9-7cYF0JHsnn5f5GCx"/>
+</div>
+<div class="p-8 flex flex-col flex-grow items-center text-center">
+<span class="font-label-caps text-label-caps text-secondary mb-2">FLAVOR 05</span>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Silk Road</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">Milk chocolate slow-churned with aromatic chai spices and honey.</p>
+<button class="mt-auto font-label-caps text-label-caps text-primary-container border-b border-[#C5A059] pb-1 hover:text-secondary transition-colors">
+                                VIEW DETAILS
+                            </button>
+</div>
+</div>
+</div>
+<!-- 6. Berry Bliss (Large Vertical) -->
+<div class="md:col-span-5 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col h-full">
+<div class="flex-grow overflow-hidden relative min-h-[400px]">
+<img alt="Berry Bliss" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" data-alt="Freeze-dried raspberry fragments scattered across white chocolate bars, vibrant red on cream white, minimalist composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJAMuDG7kvZ-31JIUTrcQMGMcrl0If5KF9Shf51V6YtWvyeWq6LdgWZS4F5S0Z7uhYL63BxgTGZiqLjeanTm1KL_7xHlLB48e4y6PWsuOqaontIiaYOiTL3XS2kXVYzCdNeBFz7A8qeyLw2Z6GF3gdbpubZt_Qv1BGsnZEeIz8zs5NnEpmarjgP6-Kpf5ETIdyiylyWsAyQsb4dwZWb0_gMvzRgQpkcDDHGWt_rdpYc8g74W3JpeRDUU-PxXKFN6jLiX0HMFlWEA3q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="p-10 text-left">
+<span class="font-label-caps text-label-caps text-secondary mb-3">FLAVOR 06</span>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Berry Bliss</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A symphony of sweet white chocolate and tart, freeze-dried raspberries.</p>
+<button class="px-8 py-3 border border-[#C5A059] text-primary-container font-label-caps text-label-caps tracking-widest hover:bg-[#C5A059] hover:text-white transition-all duration-300">
+                                EXPLORE TASTE
+                            </button>
+</div>
+</div>
+</div>
+<!-- 7. Espresso Peak -->
+<div class="md:col-span-7 group relative overflow-hidden bg-white lux-card-shadow lux-card-hover transition-all duration-500">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 p-12 flex flex-col justify-center bg-primary-container">
+<span class="font-label-caps text-label-caps text-[#C5A059] mb-3">FLAVOR 07</span>
+<h2 class="font-headline-md text-headline-md text-[#F9F5F2] mb-4">Espresso Peak</h2>
+<p class="font-body-md text-body-md text-[#F9F5F2]/80 mb-8 leading-relaxed">Robust dark chocolate blended with micro-ground Arabica beans for a bold awakening.</p>
+<button class="group/btn flex items-center gap-3 font-label-caps text-label-caps text-[#C5A059] hover:text-[#F9F5F2] transition-colors">
+                                LEARN MORE 
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="md:w-1/2 overflow-hidden">
+<img alt="Espresso Peak" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 aspect-square md:aspect-auto" data-alt="Dark chocolate bars next to freshly roasted coffee beans, steam rising in a warm, dark, luxurious setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2h2B8GGQTPeDsSjiwUr3tWWS_Wg4gyaZ_qWhc4EIRYjHhFGIPKCo226LR-T898-sBLV-BBcrvdqrHrIxrInC8nKNHOLPT8H0g_iFW-9DPd7VNl5uaBNgEKbJDq2qpKYiINESDYGhSRDKaHon_gfd-LGa7uTPt6sooY_gaZi4kE8YF25Whcx_5CTSAcu_F8fMGQA2heAqhCQ3zuwLRQsDeHuRWuqpZpqTWo1hXnfhe8rLswysq-J6beJABXskOoStuu6_DNNbVjqKG"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA Section -->
+<section class="max-w-7xl mx-auto px-8 mt-section-gap text-center bg-[#3C2A21] py-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-[#C5A059]/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-[#C5A059]/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-[#F9F5F2] mb-6 italic">Savor the Secret</h2>
+<p class="font-body-md text-body-md text-[#F9F5F2]/70 max-w-lg mx-auto mb-10">
+                    Join our inner circle for exclusive access to limited-edition seasonal releases and tasting events.
+                </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-grow bg-transparent border-b border-[#C5A059]/50 text-[#F9F5F2] placeholder-[#F9F5F2]/40 py-3 px-2 focus:border-[#C5A059] focus:ring-0 outline-none transition-all" placeholder="Your email address" type="email"/>
+<button class="px-8 py-3 bg-[#C5A059] text-[#3C2A21] font-label-caps text-label-caps tracking-widest hover:bg-[#F9F5F2] transition-colors" type="submit">
+                        SUBSCRIBE
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 mt-20 bg-[#3C2A21] dark:bg-stone-900 border-t border-[#C5A059]/20 font-['Noto_Serif'] text-sm tracking-wide leading-relaxed">
+<div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row justify-between items-start gap-12 text-[#F9F5F2] dark:text-stone-300">
+<div class="max-w-xs">
+<div class="text-xl font-bold text-[#C5A059] tracking-widest mb-4">HAIJAB'S CHOCOLATE</div>
+<p class="opacity-70">Handcrafting pure chocolate indulgence through traditional tempering methods and modern flavor exploration.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-[#C5A059] mb-2 uppercase text-xs tracking-widest">Discover</span>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Home</a>
+<a class="text-[#C5A059] font-bold" href="#">Flavors</a>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Business</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-[#C5A059] mb-2 uppercase text-xs tracking-widest">Connect</span>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Instagram</a>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Pinterest</a>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-[#C5A059] mb-2 uppercase text-xs tracking-widest">Values</span>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Shop</a>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Sustainability</a>
+<a class="text-[#F9F5F2]/70 hover:text-[#C5A059] transition-all duration-300 hover:translate-x-1" href="#">Origins</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-10 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 opacity-50">
+<p>© 2024 Haijab's Chocolate. Handcrafted Indulgence.</p>
+<div class="flex gap-8">
+<a class="hover:text-[#C5A059]" href="#">Privacy Policy</a>
+<a class="hover:text-[#C5A059]" href="#">Shipping</a>
+</div>
+</div>
+</footer>
+</body></html>
